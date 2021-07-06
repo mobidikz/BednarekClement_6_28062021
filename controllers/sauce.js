@@ -67,7 +67,7 @@ exports.likeSauce = (req, res, next) => {
         
         .catch( error => res.status(400).json({ error}))
     } else if(like === -1) { // Option dislike
-        Sauce.updateOne({_id: req.params.id}, { $inc: { dislikes: 1}, $push: { usersDisliked: req.body.userId}, _id: req.params.id })
+        Sauce.updateOne({_id: req.params.id}, { $inc: { dislikes: 1}, $push: { usersDisliked: req.body.userId}, _id: req.params.id }) // 1 argument quel objet on modifie, 2 argument nouvel objet
         .then( () => res.status(200).json({ message: 'Vous avez disliké :(' }))
         .catch( error => res.status(400).json({ error}))
 
