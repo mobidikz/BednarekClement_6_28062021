@@ -3,13 +3,14 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 
-const dotEnv = require('dotenv').config();
+require('dotenv').config();
+const mongoUser = process.env.MONGOUSER;
 
 const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 
 
-mongoose.connect(client.login(process.env.MONGOADMIN),
+mongoose.connect(mongoUser,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))

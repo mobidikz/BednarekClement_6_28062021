@@ -1,10 +1,12 @@
+//import mongoose
 const mongoose = require("mongoose");
 
+//import mongoose-unique-validator
 const uniqueValidator = require("mongoose-unique-validator");
 
 const userSchema = mongoose.Schema({
-    //userId: { type: String, required: true },
-    email: {type: String, require: true, unique: true},
+    
+    email: {type: String, require: true, unique: true}, //unique pour que deux mêmes adresses mails puissent être enregistrée
     password: {type: String, require: true}
 });
 
