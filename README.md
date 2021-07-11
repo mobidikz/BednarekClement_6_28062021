@@ -2,7 +2,7 @@
 ***
 Projet formation OpenClassroom - So Pekocko
 
-# Procédure instalation 
+# Procédure installation 
 
 ## Front :
 Cloner le repo https://github.com/OpenClassrooms-Student-Center/dwj-projet6
